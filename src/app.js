@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const authRouter = require("./routers/auth.router");
+const userRouter = require("./routers/user.router");
 const path = require("path");
 
 const port = process.env.PORT;
@@ -30,7 +31,7 @@ app.get("/", (req, res) => {
 });
 
 authRouter(app);
-
+userRouter(app);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);

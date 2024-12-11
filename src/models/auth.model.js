@@ -53,7 +53,7 @@ class authModels {
             username: data.username,
             password: hashedPassword,
             salt: salt,
-            role: data.role,
+            role: "Customer",
           });
         }
       })
